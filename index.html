@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <article>
+            <form action="">
+                <div>
+                    <label for="was">Was soll berechnet werden?</label>
+                    <input type="radio" name="was" id="aufschlag" checked onclick="bretto()">
+                    <label for="was"> Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+                    <br>
+                    <input type="radio" name="was" id="abziehen" onclick="bretto()">
+                    <label for="was"> Mehrwertsteur abziehen (Brutto zu Netto)</label>
+                    <br>
+                </div>
+                <div>
+                    <label for="satz">Mehrwehrsteuersatz</label>
+                    <input type="radio" name="satz" id="nineteen" checked>
+                    <label for="satz">19%</label>
+                    <input type="radio" name="satz" id="sixteen">
+                    <label for="satz">16%</label>
+                    <input type="radio" name="satz" id="seven">
+                    <label for="satz">7%</label>
+                    <input type="radio" name="satz" id="five">
+                    <label for="satz">5%</label>
+                </div>
+                <div>
+                    <label for="betrag" id="bretto">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label>
+                    <input type="number" name="betrag" id="input">
+                </div>
+                <input type="button" value="BERECHNEN" onclick="calculate()">
+            </form>
+            <h3>Ergebnis</h3>
+            <div id="result">
+                <div id="result1">
+                    <p>Mehrwertsteuerbetrag:</p>
+                    <h2 id="mwst"></h2>
+                </div>
+                <div id="result2">
+                    <p id="result-label">Bruttobetrag (Endpreis):</p>
+                    <h2 id="brutto"></h2>
+                </div>
+            </div>
+            </form>
+        </article>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
